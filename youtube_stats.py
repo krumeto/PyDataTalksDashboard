@@ -59,7 +59,7 @@ def get_video_data(client, video_string):
 
     return video_dict
 
-
+#some dumb stuff
 youtube = connect_to_youtube_api(API_KEY)
 
 video_string = get_channels_videos(youtube, "UCscdxGKSj4hOaVFYvslW1-g")
