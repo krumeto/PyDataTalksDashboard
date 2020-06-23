@@ -1,7 +1,7 @@
 import sqlite3
 import pandas as pd
 
-conn = sqlite3.connect('youtube.db')
+conn = sqlite3.connect('YouTubePyData\PyDataTalksDashboard\youtube.db')
 
 pychannels = [('PyDataTV', 'UCOjD18EJYcsBog4IozkF_7w'), ('EnthoughtMedia', 'UCkhm72fuzkS9fYGlGpEmj7A'), ('Google Cloud Platform', 'UCJS9pqu9BzkAMNTmzNMNhvg',),
 ('PyData Montreal','UC2d_azMgPLw_8JzgbpNb2oQ'), ('Anaconda, inc.', 'UCND4vKhJssAtK8p1Blfj14Q'), ('PyDataMCR','UCTCV2vonJgaQVb8AdMgdvCA'), ('PyData Madison','UCR3LMPeZR_VcaIAj_YnR_sw'),
