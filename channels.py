@@ -2,9 +2,9 @@ import os
 from googleapiclient.discovery import build
 import pandas as pd
 
-API_KEY = os.environ.get('YOUTUBE_API')
+#API_KEY = os.environ.get('YOUTUBE_API')
 
-youtube = build('youtube', 'v3', developerKey = API_KEY)
+#youtube = build('youtube', 'v3', developerKey = API_KEY)
 
 pychannels = [('PyDataTV', 'UCOjD18EJYcsBog4IozkF_7w'), ('EnthoughtMedia', 'UCkhm72fuzkS9fYGlGpEmj7A'), ('Google Cloud Platform', 'UCJS9pqu9BzkAMNTmzNMNhvg',),
 ('PyData Montreal','UC2d_azMgPLw_8JzgbpNb2oQ'), ('Anaconda, inc.', 'UCND4vKhJssAtK8p1Blfj14Q'), ('PyDataMCR','UCTCV2vonJgaQVb8AdMgdvCA'), ('PyData Madison','UCR3LMPeZR_VcaIAj_YnR_sw'),
@@ -25,18 +25,7 @@ pychannels = [('PyDataTV', 'UCOjD18EJYcsBog4IozkF_7w'), ('EnthoughtMedia', 'UCkh
 ('PyData Lancaster', 'UCdgx_UhyKcy2V0dkKwBGVEQ'), ('PyData Tokyo', 'UCwvss5yZK7xJWT46m1DhyFg'), ('PyData Brasilia', 'UCFXlV7l3u237Y-xQ-2YQzAA'), ('SciPyLA', 'UClb88lwUvlFikmhTzVGsVGA'), 
 ('EuroSciPy', 'UCruMegFU9dg2doEGOUaAWTg'),  ('Kaggle','UCSNeZleDn9c74yQc-EKnVTA'),  ('Explosion', 'UCFduT4kW_eLDbEW6XoA5F0A')]
 
-channel_request = youtube.channels().list(
-    part = 'contentDetails',
-    forUsername = "kaggledotcom"
-    #id = "UCphaUFghyyhpd9Fi2nBKsNA"
-    #id = 'UCOjD18EJYcsBog4IozkF_7w'
-
-)
-
-channel_response = channel_request.execute()
-print(channel_response)
 
 channels_df = pd.DataFrame(pychannels, columns = ('channel_name', 'channel_id'))
 
-print(channels_df.shape)
-print(channels_df.head())
+channels_df.to_sql('youtube')
