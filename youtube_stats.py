@@ -61,13 +61,16 @@ def get_video_data(client, video_string):
 
 #some dumb stuff
 youtube = connect_to_youtube_api(API_KEY)
+get_video_data(youtube, 'rk-f3B-eMkI')
+
+
 
 video_string = get_channels_videos(youtube, "UCscdxGKSj4hOaVFYvslW1-g")
 print(pd.DataFrame(get_video_data(youtube, video_string)).T)
 
 # youtube = build('youtube', 'v3', developerKey = API_KEY)
 
-# # pychannels = ['PyDataTV', 'EnthoughtMedia', 'Google Cloud Platform', 
+# # pychannels = ['PyDataTV', 'EnthoughtMedia', 'Google Cloud Platform',
 # # ('PyData Montreal','UC2d_azMgPLw_8JzgbpNb2oQ'), 'PyDataMCR', 'PyData Madison', ('PyData São Paulo', 'UCejuzULiRcqml_DOnY2IFfA' ),
 # # 'PyData Salamanca', 'PyData Krakow', 'PyData Bristol', 'PyData.Osaka',
 # # 'PyData Warsaw', 'PyData Bydgoszcz', 'PyData Pune', 'PyData Taipei',
@@ -76,17 +79,21 @@ print(pd.DataFrame(get_video_data(youtube, video_string)).T)
 # # 'PyData Lancaster', 'PyData Tokyo', 'PyData Tel Aviv', 'PyData Brasilia', 'SciPyLA',
 # # 'EuroSciPy', 'Kaggle', 'Explosion']
 
+
+# API_KEY = os.environ.get('YOUTUBE_API')
+# def connect_to_youtube_api(key):
+#     return build('youtube', 'v3', developerKey = key)
+
+# youtube = connect_to_youtube_api(API_KEY)
 # channel_request = youtube.channels().list(
-#     part = 'contentDetails',
-#     #forUsername = 'Jake Vanderplas'
-#     id = "UCscdxGKSj4hOaVFYvslW1-g"
-#     #id = 'UCOjD18EJYcsBog4IozkF_7w'
-# )
+#         part='statistics',
+#         forUsername='PyCon 2020'
+#    )
 
 # channel_response = channel_request.execute()
-# #print(channel_response)
+# print(channel_response)
 # all_videos_id = channel_response['items'][0]['contentDetails']['relatedPlaylists']['uploads']
-# #print(all_videos_id)
+# # #print(all_videos_id)
 
 
 

@@ -23,7 +23,7 @@ pychannels = [('PyDataTV', 'UCOjD18EJYcsBog4IozkF_7w'), ('EnthoughtMedia', 'UCkh
 ('PyData Taipei', 'UC-sYXndx7shbVqOBqH4BbdQ'), ('PyData Manipal', 'UCUnU4bzivbG1EaJApxhhA1g'), ('San Francisco PyData Meetup Group', 'UC34--jrgq8QvMs8Jt_kro3w'), ('PyData Mumbai', 'UCawiaZaabJLXV7IL_IF3M4Q'),
 ('PyData Eindhoven', 'UC1rImWhf9mv6p5ZbGc5dRHA'), ('PyData Copenhagen', 'UCphaUFghyyhpd9Fi2nBKsNA'),  ('PyData Bangalore', 'UC8D_q-ZIxMtCy0ClWN1nfUw'), ('Georgi Karadzhov', 'UC4GNSALq9obnCMYWq32tNmQ'),
 ('PyData Lancaster', 'UCdgx_UhyKcy2V0dkKwBGVEQ'), ('PyData Tokyo', 'UCwvss5yZK7xJWT46m1DhyFg'), ('PyData Brasilia', 'UCFXlV7l3u237Y-xQ-2YQzAA'), ('SciPyLA', 'UClb88lwUvlFikmhTzVGsVGA'), 
-('EuroSciPy', 'UCruMegFU9dg2doEGOUaAWTg'),  ('Kaggle','UCSNeZleDn9c74yQc-EKnVTA'),  ('Explosion', 'UCFduT4kW_eLDbEW6XoA5F0A')]
+('EuroSciPy', 'UCruMegFU9dg2doEGOUaAWTg'),  ('Kaggle','UCSNeZleDn9c74yQc-EKnVTA'),  ('Explosion', 'UCFduT4kW_eLDbEW6XoA5F0A') ('PyCon2020', 'UCMjMBMGt0WJQLeluw6qNJuA')]
 
 
 channels_df = pd.DataFrame(pychannels, columns = ('channel_name', 'channel_id'))
